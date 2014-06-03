@@ -4,33 +4,52 @@ package com.dataart.ks.javaschool;
  * Клиентов нужно учитывать в создаваемой системе. На текущий момент для каждого клиента мы храним
  * следующую информацию: имя, адрес и телефон. Также каждому новому клиенту мы присваиваем уникальный ID.
  */
-public class Customer {
+abstract public class Customer {
 
-	private String name;
-	private String address;
-	private String phone;
+    private String name = "";
+    private String address ="";
+    private String phone = "";
+    private final String id;
 
-	public String getName() {
-		return name;
-	}
+    public Customer(String id) {
+        this.id = id;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public String getId() {
+        return id;
+    }
 
-	public String getAddress() {
-		return address;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public void setAddress(String address) {
-		this.address = address;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public String getPhone() {
-		return phone;
-	}
+    public String getAddress() {
+        return address;
+    }
 
-	public void setPhone(String phone) {
-		this.phone = phone;
-	}
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "name='" + name + '\'' +
+                ", address='" + address + '\'' +
+                ", phone='" + phone + '\'' +
+                ", id='" + id + '\'' +
+                '}';
+    }
 }
