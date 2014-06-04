@@ -17,6 +17,18 @@ public class OrderEntryApp {
         c.setContactName("Laura");
         c.setDiscount(12);
         System.out.println("Customer: " + c);
+
+        Category mainCategory = new Category("Main");
+        Category sub1 = new Category("2", mainCategory);
+        mainCategory.addSubCategory(new Category("Phones"));
+        Category TV = new Category("TV");
+        mainCategory.addSubCategory(TV);
+        TV.addSubCategory(new Category("Panasonic"));
+
+        Product pr = new Product();
+        //pr.setCategory(TV);
+
+        System.out.println(mainCategory);
 	}
 }
 //TODO create company and individual customer, display them in console.
