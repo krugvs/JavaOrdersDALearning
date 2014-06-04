@@ -19,3 +19,4 @@ public class OrderEntryApp {
         System.out.println("Customer: " + c);
 	}
 }
+//TODO create company and individual customer, display them in console.
